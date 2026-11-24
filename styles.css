@@ -1,2 +1,104 @@
 @import url('https://googleapis.com'); :root { --bg-black: #0a0b0d; --bg-charcoal: #121417; --bg-card: #16181c; --gold: #e5b84b; --gold-hover: #f0c761; --text-white: #ffffff; --text-gray: #b8bec8; --text-muted: #8a929e; --border-subtle: rgba(255, 255, 255, 0.08); --border-gold: rgba(229, 184, 75, 0.35); } * { box-sizing: border-box; margin: 0; padding: 0; } body { background-color: var(--bg-black); color: var(--text-white); font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; line-height: 1.6; -webkit-font-smoothing: antialiased; } a { text-decoration: none; color: inherit; } .container { max-width: 1240px; margin: 0 auto; padding: 0 32px; } /* ================= HEADER ================= */ .site-header { background: #08090b; border-bottom: 1px solid var(--border-gold); position: sticky; top: 0; z-index: 100; } .header-inner { display: flex; justify-content: space-between; align-items: center; height: 86px; } .brand { display: flex; align-items: center; gap: 16px; } .brand-divider { width: 1px; height: 36px; background: rgba(255, 255, 255, 0.35); } .brand-text { display: flex; flex-direction: column; } .brand-name { font-size: 1.25rem; font-weight: 700; letter-spacing: 0.08em; line-height: 1.1; } .brand-tagline { font-size: 0.68rem; letter-spacing: 0.24em; color: var(--text-gray); margin-top: 4px; } .main-nav { display: flex; gap: 36px; align-items: center; } .main-nav a { font-size: 0.85rem; font-weight: 500; letter-spacing: 0.1em; color: var(--text-gray); padding: 8px 0; position: relative; transition: color 0.2s; } .main-nav a:hover, .main-nav a.active { color: var(--text-white); } .main-nav a.active { color: var(--gold); } .main-nav a.active::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--gold); } /* ================= BUTTONS & EYEBROWS ================= */ .btn-gold { display: inline-flex; align-items: center; gap: 10px; background: var(--gold); color: #0a0b0d; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.08em; padding: 15px 28px; border-radius: 2px; border: 1px solid var(--gold); cursor: pointer; transition: background 0.2s, transform 0.15s; } .btn-gold:hover { background: var(--gold-hover); } .btn-outline { display: inline-flex; align-items: center; gap: 10px; background: rgba(10, 11, 13, 0.65); color: var(--text-white); font-weight: 600; font-size: 0.82rem; letter-spacing: 0.08em; padding: 15px 28px; border-radius: 2px; border: 1px solid var(--gold); cursor: pointer; transition: background 0.2s; } .btn-outline:hover { background: rgba(229, 184, 75, 0.12); } .eyebrow { display: inline-flex; align-items: center; gap: 14px; color: var(--gold); font-size: 0.8rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 16px; } .eyebrow::after { content: ''; display: inline-block; width: 48px; height: 1px; background: var(--gold); } /* ================= HOME HERO & STRIP ================= */ .hero-home { position: relative; min-height: 580px; display: flex; align-items: center; background-color: #090a0c; background-image: linear-gradient(90deg, #090a0c 0%, rgba(9, 10, 12, 0.94) 36%, rgba(9, 10, 12, 0.35) 75%, rgba(9, 10, 12, 0.55) 100%), url('hero-home.jpg'); background-size: cover; background-position: right center; border-bottom: 1px solid var(--border-gold); } .hero-home-content { max-width: 620px; padding: 80px 0; } .hero-home h1 { font-size: 3.15rem; font-weight: 700; line-height: 1.14; letter-spacing: -0.01em; margin-bottom: 22px; } .hero-home h1 span { display: block; color: var(--gold); } .short-gold-bar { width: 68px; height: 2px; background: var(--gold); margin-bottom: 24px; } .hero-subtext { color: #d0d5dd; font-size: 1.05rem; line-height: 1.65; margin-bottom: 34px; max-width: 520px; } .hero-actions { display: flex; gap: 18px; flex-wrap: wrap; } .pillars-bar { background: #0b0c0e; border-bottom: 1px solid var(--border-gold); padding: 36px 0; } .pillars-grid { display: grid; grid-template-columns: repeat(4, 1fr); } .pillar-item { display: flex; align-items: center; gap: 16px; padding: 8px24px; border-right: 1px solid var(--border-subtle); } .pillar-item:first-child { padding-left: 0; } .pillar-item:last-child { border-right: none; padding-right: 0; } .pillar-title { font-size: 0.88rem; font-weight: 700; letter-spacing: 0.05em; } .pillar-sub { font-size: 0.72rem; letter-spacing: 0.16em; color: var(--text-gray); margin-top: 2px; } /* ================= SERVICES PAGE ================= */ .hero-subpage { position: relative; min-height: 400px; display: flex; align-items: center; background-color: #0c0d10; border-bottom: 1px solid var(--border-gold); } .hero-services-bg { background-image: linear-gradient(90deg, #0b0c0e 0%, rgba(11, 12, 14, 0.92) 40%, rgba(11, 12, 14, 0.25) 100%), url('hero-services.jpg'); background-size: cover; background-position: right center; } .hero-about-bg { background-image: linear-gradient(90deg, #0b0c0e 0%, rgba(11, 12, 14, 0.9) 45%, rgba(11, 12, 14, 0.35) 100%), url('hero-about.jpg'); background-size: cover; background-position: right center; } .hero-subpage-inner { max-width: 600px; padding: 64px 0; } .hero-subpage h1 { font-size: 2.75rem; font-weight: 700; line-height: 1.15; margin-bottom: 18px; } .services-section { background: var(--bg-charcoal); padding: 72px 0; border-bottom: 1px solid var(--border-subtle); } .section-header-center { text-align: center; margin-bottom: 52px; } .section-title-flanked { display: inline-flex; align-items: center; gap: 20px; font-size: 1.55rem; font-weight: 700; letter-spacing: 0.08em; } .section-title-flanked::before, .section-title-flanked::after { content: ''; width: 56px; height: 1px; background: var(--gold); } .section-subtitle-center { font-size: 0.78rem; letter-spacing: 0.16em; color: var(--text-gray); margin-top: 10px; } .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--border-subtle); } .service-card { display: flex; gap: 18px; padding: 36px 28px; border-bottom: 1px solid var(--border-subtle); border-right: 1px solid var(--border-subtle); } .service-card:nth-child(3n) { border-right: none; } .service-card h3 { font-size: 0.98rem; font-weight: 700; letter-spacing: 0.04em; line-height: 1.35; margin-bottom: 10px; } .service-card p { font-size: 0.86rem; color: var(--text-gray); line-height: 1.55; } .cta-banner { background: #0a0b0d; padding: 46px 0; } .cta-banner-inner { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; } .cta-left { display: flex; align-items: center; gap: 24px; } .cta-divider { width: 1px; height: 48px; background: rgba(255, 255, 255, 0.25); } .cta-left h3 { font-size: 1.15rem; font-weight: 700; letter-spacing: 0.04em; } .cta-left p { font-size: 0.9rem; color: var(--text-gray); margin-top: 4px; } /* ================= ABOUT PAGE ================= */ .about-split-section { background: var(--bg-charcoal); padding: 72px 0; border-bottom: 1px solid var(--border-subtle); } .about-split-grid { display: grid; grid-template-columns: 1fr 1px1fr; gap: 48px; align-items: start; } .vertical-gold-line { width: 1px; height: 100%; min-height: 240px; background: var(--border-gold); } .about-left h2 { font-size: 2rem; font-weight: 700; line-height: 1.2; margin-bottom: 20px; } .about-left p { color: var(--text-gray); font-size: 0.96rem; line-height: 1.7; } .about-pillars { display: flex; flex-direction: column; gap: 28px; } .about-pillar-row { display: flex; gap: 18px; align-items: flex-start; } .about-pillar-row h4 { font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em; margin-bottom: 4px; } .about-pillar-row p { font-size: 0.88rem; color: var(--text-gray); } .founder-section { background: #0c0d10; padding: 76px 0; } .founder-grid { display: grid; grid-template-columns: 300px 1fr; gap: 48px; align-items: center; } .founder-photo-wrap { border: 1px solid var(--border-gold); background: #16181c; aspect-ratio: 3 / 4; overflow: hidden; } .founder-photo-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; } .founder-bio h2 { font-size: 2.2rem; font-weight: 700; line-height: 1.15; } .founder-role { font-size: 0.82rem; letter-spacing: 0.16em; color: var(--text-gray); margin: 6px 0 22px; } .founder-bio p { color: #cfd4dc; font-size: 0.96rem; line-height: 1.7; margin-bottom: 16px; } /* ================= CONTACT PAGE ================= */ .contact-section { background: var(--bg-charcoal); padding: 72px 0; } .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 56px; } .contact-form { background: #0d0f12; border: 1pxsolid var(--border-gold); padding: 36px; display: flex; flex-direction: column; gap: 18px; } .form-group { display: flex; flex-direction: column; gap: 6px; } .form-group label { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-gray); } .form-group input, .form-group textarea { background: #15181d; border: 1px solid var(--border-subtle); color: var(--text-white); padding: 12px 14px; font-family: inherit; font-size: 0.95rem; } .form-group input:focus, .form-group textarea:focus { outline: none; border-color: var(--gold); }
- 
+ `index.html` (Home Page)
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Wavetron LLC | Efficiency Redefined</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="site-header">
+<div class="container header-inner">
+<a href="index.html" class="brand">
+<svg width="56" height="36" viewBox="0 0 80 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 6L24 46L40 16L56 46L76 6" stroke="#E5B84B" stroke-width="3.2" stroke-linecap="square"/>
+<path d="M13 6L24 28L35 6" stroke="#E5B84B" stroke-width="2.6" stroke-linecap="square"/>
+<path d="M45 6L56 28L67 6" stroke="#E5B84B" stroke-width="2.6" stroke-linecap="square"/>
+</svg>
+<div class="brand-divider"></div>
+<div class="brand-text">
+<span class="brand-name">WAVETRON LLC</span>
+<span class="brand-tagline">EFFICIENCY REDEFINED</span>
+</div>
+</a>
+<nav class="main-nav">
+<a href="index.html" class="active">HOME</a>
+<a href="services.html">SERVICES</a>
+<a href="about.html">ABOUT US</a>
+<a href="contact.html">CONTACT</a>
+</nav>
+</div>
+</header>
+<section class="hero-home">
+<div class="container">
+<div class="hero-home-content">
+<h1>
+         Independent Expertise.
+<span>Mission-Critical Confidence.</span>
+</h1>
+<div class="short-gold-bar"></div>
+<p class="hero-subtext">
+         BMS/EPMS consulting for mission-critical facilities, with a focus on reliability, performance, and operational efficiency from commissioning through turnover.
+</p>
+<div class="hero-actions">
+<a href="services.html" class="btn-gold">OUR SERVICES &rarr;</a>
+<a href="contact.html" class="btn-outline">CONTACT US</a>
+</div>
+</div>
+</div>
+</section>
+<section class="pillars-bar">
+<div class="container">
+<div class="pillars-grid">
+<div class="pillar-item">
+<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E5B84B" stroke-width="1.6">
+<polygon points="12 2 2 7 12 12 22 7 12 2"/>
+<polyline points="2 12 12 17 22 12"/>
+<polyline points="2 17 12 22 22 17"/>
+</svg>
+<div>
+<div class="pillar-title">BMS / EPMS</div>
+<div class="pillar-sub">CONSULTING</div>
+</div>
+</div>
+<div class="pillar-item">
+<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E5B84B" stroke-width="1.6">
+<path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2"/>
+<rect x="9" y="3" width="6" height="4" rx="1"/>
+<polyline points="9 14 11 16 15 12"/>
+</svg>
+<div>
+<div class="pillar-title">COMMISSIONING</div>
+<div class="pillar-sub">&amp; QA/QC</div>
+</div>
+</div>
+<div class="pillar-item">
+<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E5B84B" stroke-width="1.6">
+<line x1="18" y1="20" x2="18" y2="10"/>
+<line x1="12" y1="20" x2="12" y2="4"/>
+<line x1="6" y1="20" x2="6" y2="14"/>
+<polyline points="4 10 10 6 15 8 20 3"/>
+</svg>
+<div>
+<div class="pillar-title">OPERATIONAL</div>
+<div class="pillar-sub">PERFORMANCE</div>
+</div>
+</div>
+<div class="pillar-item">
+<svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#E5B84B" stroke-width="1.6">
+<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+<polyline points="9 12 11 14 15 10"/>
+</svg>
+<div>
+<div class="pillar-title">TURNOVER</div>
+<div class="pillar-sub">&amp; READINESS</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</body>
+</html> 
